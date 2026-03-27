@@ -3,15 +3,21 @@ import { useForm } from "react-hook-form";
 import { recipeContext } from "../context/RecipeContext";
 import { useContext } from "react";
 import { createContext, useState } from "react";
+import { toast } from "react-hot-toast";
+
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
+  const navigate = useNavigate();
   const { data, setData } = useContext(recipeContext);
   const { register, handleSubmit, reset } = useForm();
 
   const SubmitHandler = (recipe) => {
     recipe.id = nanoid();
     setData([...data, recipe]);
+    toast.success("Recipe created successfully");
     reset();
+    navigate("/recipes");
   };
 
   return (
@@ -23,6 +29,8 @@ const Create = () => {
         type="url"
         placeholder="enter image url"
       />
+
+      <small className="text-sm text-red-400">This is how error is shown</small>
 
       <input
         className="block border-b outline-none p-2 bg-transparent"

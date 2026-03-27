@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 const Recipecard = (props) => {
   const { id, image, title, desc, chef } = props.recipe;
   return (
-    <Link to={`/recipe/detail/${id}`} className="block w-[20vw] rounded overflow-hidden shadow ">
+    <Link
+      to={`/recipes/details/${id}`}
+      className="duration-150 hover:scale-105 mr-3 mb-3 block w-[20vw] rounded overflow-hidden shadow"
+    >
       <img className="w-full h-[23vh] object-cover" src={image} alt="" />
       <h1 className="mt-2 px-2 font-black">{title}</h1>
       <small className="px-2 text-red-400">{chef}</small>

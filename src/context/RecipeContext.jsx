@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 export const recipeContext = createContext(null);
 
 const RecipeContext = (props) => {
@@ -24,10 +23,9 @@ const RecipeContext = (props) => {
         "Slice and serve hot."
       ],
       "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      title : "Classic Margherita Pizza",
       chef: "Chef Mario",
-      "category": [
-        "Dinner"
-      ],
+      category: "Dinner",
       desc: "A classic Italian pizza with fresh mozzarella and basil. Perfect for a quick and delicious meal. This pizza is a favorite among pizza lovers and is sure to satisfy your cravings."
     },
   ]);
