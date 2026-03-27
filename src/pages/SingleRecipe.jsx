@@ -10,17 +10,18 @@ const SingleRecipe = () => {
   const navigate = useNavigate();
   const params = useParams();
   const recipe = data.find((recipe) => recipe.id == params.id);
-  const { register, handleSubmit, reset } = useForm({
-    defaultValues: {
-      title: recipe.title,
-      chef : recipe.chefName,
-      desc : recipe.desc,
-      image : recipe.image, 
-      ingr : recipe.ingr,
-      inst : recipe.inst,
-      category : recipe.category,
-    },
-  });
+ const { register, handleSubmit, reset } = useForm({
+  // Using 'values' instead of 'defaultValues' makes the form reactive
+  values: {
+    title: recipe?.title,
+    chef: recipe?.chef, // Check if your data is .chef or .chefName
+    desc: recipe?.desc,
+    image: recipe?.image,
+    ingr: recipe?.ingr,
+    inst: recipe?.inst,
+    category: recipe?.category,
+  },
+});
 
   const SubmitHandler = (recipe) => {
     const index = data.findIndex((recipe) => params.id == recipe.id);
