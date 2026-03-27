@@ -40,19 +40,19 @@ const Create = () => {
 
       <textarea
         className="block border-b outline-none p-2 bg-transparent"
-        {...register("description")}
+        {...register("desc")}
         placeholder="description"
       ></textarea>
 
       <textarea
         className="block border-b outline-none p-2 bg-transparent"
-        {...register("ingredients")}
+        {...register("ingr")}
         placeholder="ingredients (comma separated)"
       ></textarea>
 
       <textarea
         className="block border-b outline-none p-2 bg-transparent"
-        {...register("instructions")}
+        {...register("inst")}
         placeholder="instructions"
       ></textarea>
 
@@ -60,9 +60,10 @@ const Create = () => {
         className="block border-b outline-none p-2 bg-transparent"
         {...register("category")}
       >
-        <option value="cat-1">Category 1</option>
-        <option value="cat-2">Category 2</option>
-        <option value="cat-3">Category 3</option>
+        <option value="breakfast ">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="supper">Supper</option>
+        <option value="dinner">Dinner</option>
       </select>
 
       <button className="mt-5 block bg-gray-800 px-4 py-2 rounded">

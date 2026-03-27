@@ -20,8 +20,8 @@ const Navbar = () => {
       <NavLink to="/About" className={linkClass}>About</NavLink>
       <NavLink to="/Recipies" className={linkClass}>Recipies</NavLink>
 
-      <NavLink to="/create-recipes" className={buttonClass}>
-        Create Recipes
+      <NavLink to="/create-recipe" className={buttonClass}>
+        Create Recipe
       </NavLink>
 
     </div>
